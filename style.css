@@ -1,0 +1,466 @@
+body {
+  display: block;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100%;
+  background: #ee9ca7;
+}
+
+.anima {
+  width: 100%;
+  height: auto;
+}
+
+.button_div {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  z-index: 20;
+}
+
+.button_class {
+  width: 140px;
+  height: 40px;
+  position: inherit;
+  left: 50%;
+  /*先定位到父元素（红盒）的中线，然后使子元素的外边界左偏移半个子元素的宽度，即可*/
+  margin-left: -70px;
+  /*向左偏移元素的总宽度的一半*/
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+#setup {
+  background: rgb(238, 156, 167);
+  background: radial-gradient(circle, rgba(238, 156, 167, 1) 0%, rgba(237, 90, 101, 1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+#setup:before,
+#setup:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+  box-shadow:
+    -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, .4),
+    4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+
+#setup:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+
+#setup:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+
+#setup:hover {
+  background: transparent;
+  color: #2775b6;
+  box-shadow: none;
+}
+
+#setup:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+
+#setup:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+
+#setup span:before,
+#setup span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+    -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, .4),
+    4px 4px 5px 0px rgba(0, 0, 0, .3);
+}
+
+#setup span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+
+#setup span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+
+#setup span:hover:before {
+  width: 100%;
+}
+
+#setup span:hover:after {
+  width: 100%;
+}
+
+.textdiv {
+  width: 100%;
+  position: absolute;
+  margin-top: 200px;
+  z-index: 2;
+}
+
+.birthday-video{
+  position: relative;
+  margin: auto;
+  left: 50%;
+  /*先定位到父元素（红盒）的中线，然后使子元素的外边界左偏移半个子元素的宽度，即可*/
+  margin-left: -400px;
+  /*向左偏移元素的总宽度的一半*/
+}
+
+.videoImg{
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  /*先定位到父元素（红盒）的中线，然后使子元素的外边界左偏移半个子元素的宽度，即可*/
+  margin-left: -400px;
+  /*向左偏移元素的总宽度的一半*/
+}
+
+
+.birthday_cake {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 10;
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin-top: -160px;
+  left: 50%;
+  /*先定位到父元素（红盒）的中线，然后使子元素的外边界左偏移半个子元素的宽度，即可*/
+  margin-left: -100px;
+  /*向左偏移元素的总宽度的一半*/
+}
+
+/*Candle*/
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 6px;
+  height: 35px;
+  position: relative;
+  top: 170px;
+  left: 50%;
+  /*先定位到父元素（红盒）的中线，然后使子元素的外边界左偏移半个子元素的宽度，即可*/
+  margin-left: -3px;
+  /*向左偏移元素的总宽度的一半*/
+  -webkit-transform: translateY(-300px);
+  -ms-transform: translateY(-300px);
+  transform: translateY(-300px);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: in 500ms 6s ease-out forwards;
+  animation: in 500ms 6s ease-out forwards;
+}
+
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/*Candle Fire*/
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  width: 5px;
+  height: 18px;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s 6.5s infinite;
+  animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s 6.5s infinite;
+  animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s 6.5s infinite;
+  animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s 6.5s infinite;
+  animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s 6.5s infinite;
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/*Animation Fire*/
+@-webkit-keyframes fuego {
+
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes fuego {
+
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@-webkit-keyframes in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.come {
+  animation-delay: 0.4s;
+  animation: coming 2s;
+  opacity: 1;
+}
+
+@keyframes coming {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes coming {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  -webkit-animation: square 30s infinite;
+  animation: square 30s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+
+}
+
+.bg-bubbles li:nth-child(3) {
+  left: 30%;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+
+}
+
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+
+}
+
+.bg-bubbles li:nth-child(5) {
+  left: 50%;
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s;
+
+}
+
+.bg-bubbles li:nth-child(6) {
+  left: 60%;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+
+}
+
+.bg-bubbles li:nth-child(7) {
+  left: 70%;
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+
+}
+
+.bg-bubbles li:nth-child(8) {
+  left: 80%;
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+
+}
+
+.bg-bubbles li:nth-child(9) {
+  left: 90%;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+
+}
+
+.bg-bubbles li:nth-child(10) {
+  left: 100%;
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+
+}
+
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(600deg);
+    transform: translateY(-1000px) rotate(600deg);
+  }
+}
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(600deg);
+    transform: translateY(-1000px) rotate(600deg);
+  }
+}
+
+.fire {
+  /*
+  width: 100%;
+  height: 100px;
+  margin: 50% auto;
+  */
+  position: absolute;
+  z-index: 1;
+}
+
+
+.stage {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  margin: 25% auto;
+  z-index: 3;
+}
+
+#canvas {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+}
